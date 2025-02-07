@@ -1,17 +1,24 @@
-﻿using System.Net.NetworkInformation;
 
-namespace _03_02_25
+using System.Net.NetworkInformation;
+
+namespace MariaEduarda
 {
+    internal class carro
+    {
+        public string marca { get; set; }
+        public string modelo { get; set; }
+        public string ano { get; set; }
+    }
     class Program
     {
         static void Main(string[] args)
 
         //exercício 1
 
-        { /*
+        { 
             System.Console.WriteLine("Insira o primeiro número: ");
             var n1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Insira o segundo número: ");
+            System.Console.WriteLine("Insira o segundo número: ");
             var n2 = int.Parse(Console.ReadLine());
 
             var soma = n1 + n2;
@@ -27,7 +34,7 @@ namespace _03_02_25
 
             //exercício 2
 
-            /* System.Console.WriteLine("Insira o preço do produto: ");
+             System.Console.WriteLine("Insira o preço do produto: ");
              float valor = float.Parse(Console.ReadLine());
 
              double desconto = (valor * 0.2);
@@ -36,7 +43,7 @@ namespace _03_02_25
 
             //exercício 3
 
-            /* for(int numero3 = 0; numero3 < 20; numero3 ++) { 
+             for(int numero3 = 0; numero3 < 20; numero3 ++) { 
 
                  if(numero3 % 2 == 0)
                  {
@@ -44,11 +51,11 @@ namespace _03_02_25
                      System.Console.WriteLine($"{numero3}"); 
                  }
 
-             }*/
+             }
 
             //exercício 4
 
-            /*System.Console.WriteLine("Insira um número: ");
+            System.Console.WriteLine("Insira um número: ");
             var numero4 = int.Parse(Console.ReadLine());
             System.Console.WriteLine("Insira o segundo número: ");
             var numero5 = int.Parse(Console.ReadLine());
@@ -60,11 +67,11 @@ namespace _03_02_25
                     
             }
             System.Console.WriteLine($"A soma dos números no intervalo do número {numero4} e o número {numero5} é {soma1}");
-             */
+             
 
             //exercício 5
 
-            /* int[] vetor= new int[5];
+             int[] vetor= new int[5];
 
              for (int i1 = 0;i1 < 5; i1++)
              {
@@ -81,11 +88,11 @@ namespace _03_02_25
                 System.Console.WriteLine($"{vetor[i2]}");
 
              }
-            */
+            
 
             //exercício 6
 
-            /* int[] vetor1 = new int[5];
+             int[] vetor1 = new int[5];
 
              for (int i3 = 0; i3 < 5; i3++)
              {
@@ -108,11 +115,11 @@ namespace _03_02_25
                  System.Console.WriteLine($"Este número não está na posição {i4 + 1} do vetor");
 
              }
-         }*/
+         }
 
             //exercício 7
 
-            /* System.Console.WriteLine("Insira a 1° nota: ");
+             System.Console.WriteLine("Insira a 1° nota: ");
              float numero9 = float.Parse(Console.ReadLine());
              System.Console.WriteLine("Insira a 2° nota: ");
              float numero10 = float.Parse(Console.ReadLine());
@@ -123,29 +130,82 @@ namespace _03_02_25
 
              System.Console.WriteLine($"A média dessas notas é {media}");
 
-         }*/
 
             //exercício 8
 
-           /* System.Console.WriteLine("Insira um número: ");
-            var numero12 = int.Parse(Console.ReadLine());
+             System.Console.WriteLine("Insira um número: ");
+             var numero12 = int.Parse(Console.ReadLine());
 
-            for(int i5 = 0; i5 < 10; i5++)
-            {
-                if (numero12 % (i5 + 1) == 0)
-                {
-                    System.Console.WriteLine($"O número {numero12} não é primo.");
-                    return;
-                }
+             for(int i5 = 0; i5 < 10; i5++)
+             {
+                 if (numero12 % (i5 + 1) == 0)
+                 {
+                     System.Console.WriteLine($"O número {numero12} não é primo.");
+                     return;
+                 }
 
-                
-                
-                    System.Console.WriteLine($"O número {numero12}  é primo.");*/
-                    
-                }
+
+
+                     System.Console.WriteLine($"O número {numero12}  é primo.");
+
+                 }
+
+
+            //exercício 9
+
+             var carro = new carro();
+
+            System.Console.WriteLine("Insira a marca do carro: ");
+            var marca = (Console.ReadLine());
+            System.Console.WriteLine("Insira o modelo do carro: ");
+            var modelo = (Console.ReadLine());
+            System.Console.WriteLine("Insira o ano do carro: ");
+            var ano = (Console.ReadLine());
+
+            System.Console.WriteLine($"{marca} {modelo} - {ano}");
+
+            //exercício 10
+
+            System.Console.WriteLine("Insira o 1° número: ");
+            var n13 = int.Parse(Console.ReadLine());
+            System.Console.WriteLine("Insira o 2° número: ");
+            var n14 = int.Parse(Console.ReadLine());
+
+            var soma = n13 + n14;
+            var subt = n13 - n14;
+            var mult = n13 * n14;
+            double div = n13 / n14;
+
+            System.Console.WriteLine("Qual cálculo deseja realizar? ");
+            System.Console.WriteLine("1-Soma");
+            System.Console.WriteLine("2-Subtração");
+            System.Console.WriteLine("3-Multiplicação");
+            System.Console.WriteLine("4-Divisão");
+            var n15 = int.Parse(Console.ReadLine());
+
+            if(n15 == 1){
+
+             System.Console.WriteLine($"Soma: {soma}");
 
             }
-            
 
-    }                                             
-    }  
+            else if(n15 == 2){
+
+            System.Console.WriteLine($"Subtração: {subt}");
+
+            }
+
+            else if(n15 == 3){
+
+            System.Console.WriteLine($"Multiplicação: {mult}");
+
+            }
+
+            else{
+            System.Console.WriteLine($"Divisão: {div}");
+
+            }
+
+    }
+    }
+}
